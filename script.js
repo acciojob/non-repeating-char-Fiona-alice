@@ -1,13 +1,17 @@
 //your JS code here. If required.
-function nonRepeat(str){
-	var output;
-var newString="";
-	for(let i=0;i<str.length();i++){
-		for(let j=i+1;j<str.length();j++){
-			if(i!=j && str.charAt(i)!=str.charAt(j)){
-				output=str.charAt(i);
-			}
+var str=prompt("Enter a string");
+let splitedArr=str.split("");
+console.log(splitedArr);
+var newEle="";
+var i=0;
+for (let i = 0; i < splitedArr.length; i++) {
+	for (let j = 0; j < splitedArr.length; j++){
+		if(splitedArr[i]==splitedArr[j]&&i!=j){
+			console.log(splitedArr[j]);
+			break;
+		}else{
+			newEle=splitedArr[j]
 		}
-		var input=prompt("Enter a string",str);
-		nonRepeat(input);
-		alert(output);
+		}
+	}
+alert(newEle);
